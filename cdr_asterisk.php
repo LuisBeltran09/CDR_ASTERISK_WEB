@@ -2,9 +2,7 @@
 
 include("config.php");
 
-
 //Filtros mysql para consultar las llamadadas en: ultimo año, ultima semana y por meses//
-
 $sqlfiltros = [
     "s"   => ' AND YEAR(NOW()) = YEAR(calldate) AND WEEK(NOW()) = WEEK(calldate)',
     "m1"  => 'AND YEAR(NOW()) = YEAR(calldate) AND MONTH(calldate)= 1',

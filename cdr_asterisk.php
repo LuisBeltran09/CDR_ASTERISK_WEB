@@ -141,18 +141,11 @@ if (!array_key_exists($f, $sqlfiltros)) {
 <?php
 
 try {
-    $mbd = new PDO('mysql:host=192.168.254.110;dbname=asteriskpbx', $userdb, $password);
+    $mbd = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $password);
     foreach ($mbd->query('SELECT * FROM asteriskpbx.cdr WHERE lastapp = "Dial"' . $sqlfiltros[$f] .
         ' ORDER BY calldate DESC ') as $fila) {
 
-        /* Array ( [calldate] => 2022-04-25 13:26:56 [0] => 2022-04-25 13:26:56
-        [clid] => "Irekisoft" <40> [1] => "Irekisoft" <40> [src] => 40 [2] => 40 [dst] => 35 [3] => 35
-        [dcontext] => from-repelega [4] => from-repelega [channel] => PJSIP/40-00000000 [5] => PJSIP/40-00000000
-        [dstchannel] => [6] => [lastapp] => Hangup [7] => Hangup [lastdata] => [8] => [duration] => 0 [9] => 0
-        [billsec] => 0 [10] => 0 [disposition] => ANSWERED [11] => ANSWERED [amaflags] => 3 [12] => 3
-        [accountcode] => [13] => [uniqueid] => 1650886002.0 [14] => 1650886002.0 [userfield] => [15] => )
-         */
-
+    
         echo "<tr>";
 
         echo "<td>" . $fila["calldate"] . "</td>";

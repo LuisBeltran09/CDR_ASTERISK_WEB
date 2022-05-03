@@ -1,3 +1,5 @@
 <?php
-$password="tucontraseña";
-$userdb="Nombreuserdb";
+$dbname="nombrebasedatos";
+$dbhost="ipbasedatos";
+$dbuser="usuariobasedatos";
+$password="clavedeusuario";

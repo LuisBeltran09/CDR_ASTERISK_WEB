@@ -88,7 +88,7 @@ if (!array_key_exists($f, $sqlfiltros)) {
 </nav>
 
 
-<body style="background-color:#dbe1ea">
+<body>
 
 <div class="dropdown position-absolute top-0 end-0 m-4" >
 

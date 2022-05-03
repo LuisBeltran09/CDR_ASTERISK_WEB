@@ -76,17 +76,10 @@ if (!array_key_exists($f, $sqlfiltros)) {
 </head>
 
 <nav>
-
-<div class="position-absolute top-0 start-0 px-5 {
-  padding-left: ($spacer * .25) !important;
-  padding-right: ($spacer * .5) !important;}">
-
-    <img src="http://www.esle.eu/sites/default/files/styles/logotipo/public/socios/2018-05/Irekisoft.png?itok=vH2g-fad" style="width: 200px">
-
+<div class="position-absolute top-0 start-0 mx-4 my-4">
+    <img src="images/2849835_phone_telephone_cell_call_communication_icon.png" style="width: 70px">
 </div>
-
 </nav>
-
 
 <body>
 
@@ -134,7 +127,7 @@ if (!array_key_exists($f, $sqlfiltros)) {
 </p>
 
     <table class="table table-hover table-bordered border-primary table table-sm " >
-        <tr class="table text-white" style="background-color: #484df2;" >
+        <tr class="table text-white" style="background-color:#008BFF ;" >
 
             <th>Fecha-Hora</th>
             <th>Identificador</th>
@@ -148,7 +141,7 @@ if (!array_key_exists($f, $sqlfiltros)) {
 <?php
 
 try {
-    $mbd = new PDO('mysql:host=192.168.254.110;dbname=asteriskpbx', 'asterisk', $password);
+    $mbd = new PDO('mysql:host=192.168.254.110;dbname=asteriskpbx', $userdb, $password);
     foreach ($mbd->query('SELECT * FROM asteriskpbx.cdr WHERE lastapp = "Dial"' . $sqlfiltros[$f] .
         ' ORDER BY calldate DESC ') as $fila) {
 

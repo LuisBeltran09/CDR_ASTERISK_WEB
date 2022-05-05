@@ -18,7 +18,7 @@ Además tiene algunos estilos y funciones con BOOTSTRAP(css y js).
 
 ### Instalación
 
--Clonas el repo a tu servidor WEB O LAMP y modificas la configuración de tu base de datos en el config.php.sample
+-Clonas el repo a tu servidor WEB O LAMP, renombras el archivo "config.php.sample" por "config.php" y  modificas la configuración de tu base de datos en el mismo. 
 
 
 ![](images/CDR_WEB.png)
